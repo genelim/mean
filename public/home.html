@@ -1,0 +1,13 @@
+<div ng-controller="ServiceController">
+	<label>Username</label>
+	<input type="text" ng-model="user.username"/>
+	<label>Email</label>
+	<input type="text" ng-model="user.email"/>
+	<button class="btn" ng-click='add()'>ADD</button> 
+	<h1>{{description}}</h1>
+	<div ng-repeat="user in users">
+		{{user.username}} - {{user.email}}
+		<button class="btn btn-danger" ng-click="remove(user._id)">REMOVE</button>
+		<a class="btn btn-danger"  href="#/servicess/{{user._id}}">EDIT</a>
+	</div>
+</div>
