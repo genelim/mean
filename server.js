@@ -5,9 +5,7 @@ var express = require('express'),
 
 mongoose.connect('mongodb://localhost/mean');
 
-var Schema = new mongoose.Schema;
-
-var userSchema = Schema({
+var userSchema = new mongoose.Schema({
 	username: String,
 	email: String
 });
